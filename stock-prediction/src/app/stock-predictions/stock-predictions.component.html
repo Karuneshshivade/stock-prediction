@@ -1,0 +1,14 @@
+<div>
+    <h2>Stock Predictions</h2>
+    <label for="ticker">Ticker Symbol:</label>
+    <input id="ticker" [(ngModel)]="ticker" placeholder="AAPL">
+    <label for="period">Period:</label>
+    <input id="period" [(ngModel)]="period" placeholder="1y">
+    <button (click)="getPredictions()">Get Predictions</button>
+    <ul>
+      <li *ngFor="let prediction of predictions">
+        {{ prediction }}
+      </li>
+    </ul>
+  </div>
+  
